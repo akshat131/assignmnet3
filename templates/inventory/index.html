@@ -1,0 +1,33 @@
+{% extends 'inventory/base.html' %}
+
+{% block body %}
+
+
+
+    {% if all_tools %}
+    <h3 id="ap" >here are all the tools</h3>
+    <div>
+        {% for tool in all_tools %}
+
+            <div class=" st">
+
+            {{tool.name}} <br>{{tool.description}} <br> {{tool.availability}}  <br>{{tool.price}}
+            </div>
+             <form action="{% url 'inventory:tool-delete' tool.id %}" method="post" style="display: inline;">
+                                {% csrf_token %}
+                               <input type="hidden" name="tool_id" value="{{ tool.id }}" />
+                                <button type="submit" class="btn btn-default btn-sm">
+                                    <span class=" fa fa-trash strong ">&nbspDelete</span>
+                                </button>
+                            </form>
+              <a href="{% url 'inventory:tool-update' tool.pk %}" class="btn btn-default btn-sm">
+          <span class="fa fa-pen text-success">&nbspEdit</span>
+        </a>
+
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h3 class="text-danger"> Toolbox is empty.</h3>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tools</title>
+
+{% load static %}
+<link rel="shortcut icon" type="image/png" href="{%  static 'favicon.ico' %}"/>
+
+            <link rel="stylesheet"  type="text/css " href="{% static 'inventory/style.css' %}"/>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+                <script src="https://kit.fontawesome.com/deadfff268.js" crossorigin="anonymous"></script>
+                <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <img src="data:image/jpeg;base64,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" style="width:40px"></a>
+ <a class="navbar-brand" href="#">Builder</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'inventory:index' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+      <form class="form-inline navbar-center my-2 my-lg-0" >
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <span style="font-size: 18px;color:aqua; margin-right: 20px;">Hello, {{request.user}}</span>
+      <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="{% url 'inventory:tool-add' %}" >
+                        <span class="glyphicon glyphicon-plus fa fa-plus" aria-hidden="true" ></span>&nbsp; Add Tool
+                    </a>
+                </li>
+          &nbsp
+          &nbsp&nbsp&nbsp
+                <li>
+                    <a href="{% url 'inventory:logout' %}">
+                        <span class="glyphicon glyphicon-log-out fa fa-power-off" aria-hidden="true"></span>&nbsp; Logout
+                    </a>
+                </li>
+            </ul>
+
+  </div>
+</nav>
+
+{% block body %}
+{% endblock %}
+
+
+</body>
+</html>
